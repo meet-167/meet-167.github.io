@@ -1,257 +1,600 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9150794931764555" crossorigin="anonymous"></script>
   <meta charset="UTF-8" />
+  <meta name="google-site-verification" content="mvi-V_8YpIJur5pu48FlfPEpYr2J3ztghcE9Vc-DaSU" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Terms and Conditions — G12 Games</title>
+  <meta name="description" content="G12 Games — indie game and web development studio run by a 15-year-old developer from Maharashtra, India. Creator of Ball Roller 3D and Padhai 24x7." />
+  <meta name="keywords" content="G12 Games, Ball Roller 3D, indie game developer, ICSE quiz, Padhai 24x7, teen developer India, game development, web development" />
+  <meta property="og:title" content="G12 Games — Indie Dev from India" />
+  <meta property="og:description" content="Games, quizzes, and dev articles from a 15-year-old developer in Maharashtra, India." />
+  <title>G12 Games — Indie Dev from Maharashtra, India</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0d0f14;
-      --bg2: #13161e;
-      --bg3: #1a1e2a;
-      --accent: #ff7c3a;
-      --text: #e8eaf0;
-      --muted: #7a7f94;
-      --border: #232737;
+      --bg: #0d0f14; --bg2: #13161e; --bg3: #1a1e2a;
+      --accent: #ff7c3a; --accent2: #ffb347;
+      --green: #2ecc71; --green-dark: #27ae60;
+      --text: #e8eaf0; --muted: #7a7f94;
+      --border: #232737; --card-glow: rgba(255,124,58,0.08);
     }
-
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 16px; overflow-x: hidden; }
 
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      font-size: 16px;
-      overflow-x: hidden;
-    }
-
-    /* ── NAV ── */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(13,15,20,0.92);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 2rem;
-      height: 62px;
-    }
-    .nav-logo {
-      font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      font-size: 1.3rem;
-      color: var(--accent);
-      text-decoration: none;
-      letter-spacing: -0.5px;
-    }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(13,15,20,0.92); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; padding: 0 2rem; height: 62px; }
+    .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.3rem; color: var(--accent); text-decoration: none; letter-spacing: -0.5px; }
     .nav-logo span { color: var(--text); }
     .nav-links { display: flex; gap: 0.25rem; list-style: none; }
-    .nav-links a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-      padding: 0.4rem 0.8rem;
-      border-radius: 6px;
-      transition: color 0.2s, background 0.2s;
-    }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; padding: 0.4rem 0.8rem; border-radius: 6px; transition: color 0.2s, background 0.2s; }
     .nav-links a:hover { color: var(--text); background: var(--bg3); }
 
-    /* ── LEGAL CONTAINER ── */
-    .legal-wrapper {
-      padding: 5rem 1.5rem;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .legal-content {
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 3rem;
-    }
-    .legal-content h1 {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(2rem, 5vw, 2.8rem);
-      font-weight: 800;
-      color: var(--accent);
-      margin-bottom: 0.5rem;
-      letter-spacing: -1px;
-    }
-    .legal-content h2 {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.6rem;
-      font-weight: 700;
-      margin: 2.5rem 0 1rem;
-      color: var(--text);
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 0.5rem;
-    }
-    .legal-content h3 {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.2rem;
-      font-weight: 700;
-      margin: 1.5rem 0 0.8rem;
-      color: var(--text);
-    }
-    .legal-content p {
-      color: var(--muted);
-      margin-bottom: 1.2rem;
-    }
-    .legal-content ul {
-      color: var(--muted);
-      margin-left: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-    .legal-content li {
-      margin-bottom: 0.8rem;
-    }
-    .legal-content strong {
-      color: var(--text);
-    }
-    .legal-content a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 500;
-    }
-    .legal-content a:hover {
-      text-decoration: underline;
-    }
-    .date-updated {
-      font-size: 0.9rem;
-      color: var(--muted);
-      margin-bottom: 2.5rem !important;
-      display: inline-block;
-      background: var(--bg3);
-      padding: 0.3rem 0.8rem;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-    }
+    .hero { position: relative; overflow: hidden; padding: 7rem 2rem 5rem; text-align: center; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 50% at 50% -10%, rgba(255,124,58,0.18) 0%, transparent 70%), radial-gradient(ellipse 40% 30% at 80% 60%, rgba(255,179,71,0.07) 0%, transparent 60%); pointer-events: none; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,124,58,0.12); border: 1px solid rgba(255,124,58,0.3); border-radius: 999px; padding: 0.35rem 1rem; font-size: 0.82rem; color: var(--accent2); margin-bottom: 1.8rem; font-weight: 500; }
+    .hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.6rem, 7vw, 5rem); font-weight: 800; line-height: 1.1; letter-spacing: -2px; margin-bottom: 1.2rem; }
+    .hero h1 .accent { color: var(--accent); }
+    .hero-sub { font-size: clamp(1rem, 2.5vw, 1.2rem); color: var(--muted); max-width: 560px; margin: 0 auto 2.5rem; font-weight: 300; }
+    .hero-ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
-    /* ── FOOTER ── */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 2.5rem 2rem;
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.85rem;
-    }
-    footer .footer-logo {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.1rem;
-      font-weight: 800;
-      color: var(--accent);
-      margin-bottom: 0.6rem;
-      display: block;
-    }
+    .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.6rem; background: var(--accent); color: #fff; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.95rem; text-decoration: none; border-radius: 8px; border: none; cursor: pointer; transition: background 0.2s, transform 0.15s; }
+    .btn-primary:hover { background: #e86b28; transform: translateY(-1px); }
+    .btn-secondary { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.6rem; background: transparent; color: var(--text); font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 0.95rem; text-decoration: none; border-radius: 8px; border: 1px solid var(--border); cursor: pointer; transition: border-color 0.2s, background 0.2s; }
+    .btn-secondary:hover { border-color: var(--accent); background: rgba(255,124,58,0.06); }
+
+    section { padding: 5rem 1.5rem; max-width: 1100px; margin: 0 auto; }
+    .section-label { display: inline-block; font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
+    .section-title { font-family: 'Syne', sans-serif; font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800; letter-spacing: -1px; margin-bottom: 0.8rem; line-height: 1.15; }
+    .section-desc { color: var(--muted); max-width: 600px; margin-bottom: 3rem; }
+    hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
+
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    @media (max-width: 680px) { .about-grid { grid-template-columns: 1fr; gap: 2rem; } }
+    .about-text p { color: var(--muted); margin-bottom: 1rem; }
+    .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .stat-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 1.4rem; text-align: center; }
+    .stat-card .num { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800; color: var(--accent); display: block; }
+    .stat-card .lbl { font-size: 0.82rem; color: var(--muted); margin-top: 0.2rem; }
+    .skills-row { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1rem; }
+    .skill-tag { background: var(--bg3); border: 1px solid var(--border); border-radius: 999px; padding: 0.3rem 0.85rem; font-size: 0.8rem; color: var(--muted); font-weight: 500; }
+
+    .games-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .game-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s; }
+    .game-card:hover { border-color: rgba(255,124,58,0.4); box-shadow: 0 8px 40px var(--card-glow); transform: translateY(-3px); }
+    .game-card-header { padding: 1.8rem 1.8rem 1rem; }
+    .game-card-header img.game-logo { width: 72px; height: 72px; border-radius: 16px; object-fit: cover; margin-bottom: 1rem; border: 1px solid var(--border); }
+    .game-card-header .game-tag { display: inline-block; background: rgba(255,124,58,0.12); color: var(--accent); font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; border-radius: 4px; padding: 0.2rem 0.55rem; margin-bottom: 0.6rem; }
+    .game-card-header h3 { font-family: 'Syne', sans-serif; font-size: 1.4rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.5rem; }
+    .game-card-header p { color: var(--muted); font-size: 0.93rem; }
+    .game-card-features { padding: 0 1.8rem 1rem; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .feat-chip { background: var(--bg3); border: 1px solid var(--border); border-radius: 999px; padding: 0.25rem 0.7rem; font-size: 0.78rem; color: var(--muted); }
+    .game-screenshot { width: 100%; height: 180px; object-fit: cover; border-top: 1px solid var(--border); display: block; }
+    .game-card-footer { padding: 1.2rem 1.8rem; border-top: 1px solid var(--border); }
+    .btn-green { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1.3rem; background: var(--green); color: #fff; font-weight: 600; font-size: 0.88rem; text-decoration: none; border-radius: 8px; transition: background 0.2s; }
+    .btn-green:hover { background: var(--green-dark); }
+    .card-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+    .article-meta { display: flex; gap: 0.6rem; align-items: center; margin-bottom: 0.9rem; }
+    .article-cat { font-size: 0.72rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 4px; }
+    .cat-gamedev { background: rgba(255,124,58,0.15); color: var(--accent); }
+    .cat-webdev { background: rgba(46,204,113,0.15); color: var(--green); }
+    .cat-career { background: rgba(100,149,237,0.15); color: #6495ed; }
+    .article-date { font-size: 0.8rem; color: var(--muted); }
+
+    .article-full { background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; padding: 2.5rem; margin-bottom: 2rem; }
+    .article-full h2 { font-family: 'Syne', sans-serif; font-size: 1.8rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.5rem; }
+    .article-full .article-meta { margin-bottom: 1.4rem; }
+    .article-full p { color: var(--muted); margin-bottom: 1.1rem; font-size: 0.97rem; }
+    .article-full h3 { font-family: 'Syne', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text); margin: 1.8rem 0 0.6rem; }
+    .article-full ul, .article-full ol { color: var(--muted); padding-left: 1.4rem; margin-bottom: 1.1rem; }
+    .article-full ul li, .article-full ol li { margin-bottom: 0.45rem; font-size: 0.97rem; }
+    .article-full strong { color: var(--text); }
+    .article-full code { background: var(--bg3); border: 1px solid var(--border); border-radius: 4px; padding: 0.1rem 0.4rem; font-size: 0.88rem; color: var(--accent2); font-family: monospace; }
+
+    .contact-wrapper { background: var(--bg2); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; display: grid; grid-template-columns: 1fr 1.4fr; }
+    @media (max-width: 700px) { .contact-wrapper { grid-template-columns: 1fr; } }
+    .contact-info { background: linear-gradient(135deg, rgba(255,124,58,0.12) 0%, transparent 60%); padding: 3rem 2rem; border-right: 1px solid var(--border); }
+    .contact-info h3 { font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 800; margin-bottom: 0.8rem; }
+    .contact-info p { color: var(--muted); margin-bottom: 2rem; font-size: 0.95rem; }
+    .contact-item { display: flex; align-items: flex-start; gap: 0.9rem; margin-bottom: 1.4rem; }
+    .contact-icon { width: 38px; height: 38px; background: rgba(255,124,58,0.12); border: 1px solid rgba(255,124,58,0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+    .contact-item-text .label { font-size: 0.78rem; color: var(--muted); font-weight: 500; margin-bottom: 0.1rem; }
+    .contact-item-text a { color: var(--text); text-decoration: none; font-weight: 500; font-size: 0.93rem; }
+    .contact-item-text a:hover { color: var(--accent); }
+    .contact-form { padding: 3rem 2rem; }
+    .contact-form h3 { font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 700; margin-bottom: 1.5rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 0; }
+    @media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } }
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
+    .form-group label { font-size: 0.82rem; font-weight: 600; color: var(--muted); letter-spacing: 0.3px; }
+    .form-group input, .form-group textarea, .form-group select { background: var(--bg3); border: 1px solid var(--border); border-radius: 8px; padding: 0.7rem 1rem; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 0.9rem; outline: none; transition: border-color 0.2s; width: 100%; }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--accent); }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+    .form-group select option { background: var(--bg3); }
+    .field-error { border-color: #e74c3c !important; }
+    #form-err { color: #e74c3c; font-size: 0.83rem; margin-bottom: 0.8rem; display: none; }
+    .form-success-box { background: rgba(46,204,113,0.1); border: 1px solid rgba(46,204,113,0.3); border-radius: 10px; padding: 1.4rem 1.6rem; display: none; margin-top: 0.5rem; }
+    .form-success-box p { color: var(--green); margin: 0; font-size: 0.95rem; font-weight: 500; }
+
+    footer { border-top: 1px solid var(--border); padding: 2.5rem 2rem; text-align: center; color: var(--muted); font-size: 0.85rem; }
+    footer .footer-logo { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 800; color: var(--accent); margin-bottom: 0.6rem; display: block; }
     footer .footer-links { display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 1.2rem; flex-wrap: wrap; }
     footer .footer-links a { color: var(--muted); text-decoration: none; font-size: 0.85rem; }
     footer .footer-links a:hover { color: var(--text); }
 
-    @media (max-width: 600px) {
-      .legal-content { padding: 1.5rem; }
-      .legal-wrapper { padding: 3rem 1rem; }
-    }
+    @media (max-width: 600px) { .hero { padding: 5rem 1.2rem 3.5rem; } section { padding: 3.5rem 1.2rem; } .article-full { padding: 1.5rem; } }
   </style>
 </head>
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo">G12<span>Games</span></a>
+  <a href="#" class="nav-logo">G12<span>Games</span></a>
   <ul class="nav-links">
-    <li><a href="index.html#about">About</a></li>
-    <li><a href="index.html#games">Games</a></li>
-    <li><a href="index.html#articles">Articles</a></li>
-    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#games">Games</a></li>
+    <li><a href="#articles">Articles</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
-<main class="legal-wrapper">
-  <div class="legal-content">
-    <h1>Terms and Conditions</h1>
-    <p class="date-updated">Last updated: March 14, 2026</p>
-    
-    <p>Please read these terms and conditions carefully before using Our Service.</p>
-    
-    <h2>Interpretation and Definitions</h2>
-    <h3>Interpretation</h3>
-    <p>The words whose initial letters are capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
-    
-    <h3>Definitions</h3>
-    <p>For the purposes of these Terms and Conditions:</p>
-    <ul>
-      <li><strong>Affiliate</strong> means an entity that controls, is controlled by, or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.</li>
-      <li><strong>Country</strong> refers to: Maharashtra, India</li>
-      <li><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in these Terms and Conditions) refers to G12 Games.</li>
-      <li><strong>Device</strong> means any device that can access the Service such as a computer, a cell phone or a digital tablet.</li>
-      <li><strong>Service</strong> refers to the Website.</li>
-      <li><strong>Terms and Conditions</strong> (also referred to as "Terms") means these Terms and Conditions, including any documents expressly incorporated by reference, which govern Your access to and use of the Service and form the entire agreement between You and the Company regarding the Service.</li>
-      <li><strong>Third-Party Social Media Service</strong> means any services or content (including data, information, products or services) provided by a third party that is displayed, included, made available, or linked to through the Service.</li>
-      <li><strong>Website</strong> refers to G12 Games, accessible from <a href="https://gary170.github.io/" rel="external nofollow noopener" target="_blank">https://gary170.github.io/</a></li>
-      <li><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</li>
-    </ul>
-
-    <h2>Acknowledgment</h2>
-    <p>These are the Terms and Conditions governing the use of this Service and the agreement between You and the Company. These Terms and Conditions set out the rights and obligations of all users regarding the use of the Service.</p>
-    <p>Your access to and use of the Service is conditioned on Your acceptance of and compliance with these Terms and Conditions. These Terms and Conditions apply to all visitors, users and others who access or use the Service.</p>
-    <p>By accessing or using the Service You agree to be bound by these Terms and Conditions. If You disagree with any part of these Terms and Conditions then You may not access the Service.</p>
-    <p>You represent that you are over the age of 13. The Company does not permit those under 13 to use the Service without parental consent.</p>
-    <p>Your access to and use of the Service is also subject to Our Privacy Policy, which describes how We collect, use, and disclose personal information. Please read Our Privacy Policy carefully before using Our Service.</p>
-
-    <h2>Links to Other Websites</h2>
-    <p>Our Service may contain links to third-party websites or services that are not owned or controlled by the Company.</p>
-    <p>The Company has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third-party websites or services. You further acknowledge and agree that the Company shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods or services available on or through any such websites or services.</p>
-    <p>We strongly advise You to read the terms and conditions and privacy policies of any third-party websites or services that You visit.</p>
-
-    <h2>Termination</h2>
-    <p>We may terminate or suspend Your access immediately, without prior notice or liability, for any reason whatsoever, including without limitation if You breach these Terms and Conditions.</p>
-    <p>Upon termination, Your right to use the Service will cease immediately.</p>
-
-    <h2>Limitation of Liability</h2>
-    <p>Notwithstanding any damages that You might incur, the entire liability of the Company and any of its suppliers under any provision of these Terms and Your exclusive remedy for all of the foregoing shall be limited to the amount actually paid by You through the Service or 100 USD if You haven't purchased anything through the Service.</p>
-    <p>To the maximum extent permitted by applicable law, in no event shall the Company or its suppliers be liable for any special, incidental, indirect, or consequential damages whatsoever (including, but not limited to, damages for loss of profits, loss of data or other information, for business interruption, for personal injury, loss of privacy arising out of or in any way related to the use of or inability to use the Service, third-party software and/or third-party hardware used with the Service, or otherwise in connection with any provision of these Terms), even if the Company or any supplier has been advised of the possibility of such damages and even if the remedy fails of its essential purpose.</p>
-
-    <h2>"AS IS" and "AS AVAILABLE" Disclaimer</h2>
-    <p>The Service is provided to You "AS IS" and "AS AVAILABLE" and with all faults and defects without warranty of any kind. To the maximum extent permitted under applicable law, the Company, on its own behalf and on behalf of its Affiliates and its and their respective licensors and service providers, expressly disclaims all warranties, whether express, implied, statutory or otherwise, with respect to the Service, including all implied warranties of merchantability, fitness for a particular purpose, title and non-infringement, and warranties that may arise out of course of dealing, course of performance, usage or trade practice.</p>
-
-    <h2>Governing Law</h2>
-    <p>The laws of the Country, excluding its conflicts of law rules, shall govern these Terms and Your use of the Service. Your use of the Application may also be subject to other local, state, national, or international laws.</p>
-
-    <h2>Disputes Resolution</h2>
-    <p>If You have any concern or dispute about the Service, You agree to first try to resolve the dispute informally by contacting the Company.</p>
-
-    <h2>Changes to These Terms and Conditions</h2>
-    <p>We reserve the right, at Our sole discretion, to modify or replace these Terms at any time. If a revision is material We will make reasonable efforts to provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at Our sole discretion.</p>
-    <p>By continuing to access or use Our Service after those revisions become effective, You agree to be bound by the revised terms. If You do not agree to the new terms, in whole or in part, please stop using the Service.</p>
-
-    <h2>Contact Us</h2>
-    <p>If you have any questions about these Terms and Conditions, You can contact us:</p>
-    <ul>
-      <li>By email: <a href="mailto:garygaming982@gmail.com">garygaming982@gmail.com</a></li>
-    </ul>
+<div class="hero">
+  <div class="hero-badge">🇮🇳 Maharashtra, India · Age 15</div>
+  <h1>Building <span class="accent">games</span> &amp; the web,<br>one commit at a time.</h1>
+  <p class="hero-sub">I'm a self-taught indie developer crafting mobile games and web apps from scratch. Welcome to G12 Games.</p>
+  <div class="hero-ctas">
+    <a href="#games" class="btn-primary">🎮 See My Games</a>
+    <a href="#contact" class="btn-secondary">✉️ Get in Touch</a>
   </div>
-</main>
+</div>
+<hr class="divider">
+
+<section id="about">
+  <span class="section-label">About Me</span>
+  <div class="about-grid">
+    <div class="about-text">
+      <h2 class="section-title">Hey, I'm the developer behind G12 Games.</h2>
+      <p>I'm a 15-year-old self-taught developer from Maharashtra, India. I started coding out of curiosity and quickly fell in love with building things — from mobile games to web platforms.</p>
+      <p>My journey started with Scratch, HTML, CSS and Javascript, and then expanded into Unity and C# for game development as I built more ambitious projects. Every project I build teaches me something new.</p>
+      <p>Beyond coding, I love learning how projects work, understanding the needs of my users, and making software that actually gets used. G12 Games is my creative lab where ideas become real products.</p>
+      <div class="skills-row">
+        <span class="skill-tag">Unity (C#)</span>
+        <span class="skill-tag">Java</span>
+        <span class="skill-tag">HTML &amp; CSS</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">Game Design</span>
+        <span class="skill-tag">UI/UX</span>
+        <span class="skill-tag">Google Play Publishing</span>
+        <span class="skill-tag">and Gaming too...</span>
+      </div>
+    </div>
+    <div>
+      <div class="stat-grid">
+        <div class="stat-card"><span class="num">5</span><span class="lbl">Apps Built</span></div>
+        <div class="stat-card"><span class="num">15</span><span class="lbl">Game Levels Built</span></div>
+        <div class="stat-card"><span class="num">5+</span><span class="lbl">Years Coding</span></div>
+        <div class="stat-card"><span class="num">0→1</span><span class="lbl">Indie Spirit</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<hr class="divider">
+
+<section id="games">
+  <span class="section-label">My Projects</span>
+  <h2 class="section-title">Games &amp; Apps</h2>
+  <p class="section-desc">From Android games to educational quiz platforms — here's what I've shipped so far.</p>
+  <div class="games-grid">
+    <div class="game-card">
+      <div class="game-card-header">
+        <img src="logo.webp" alt="Ball Roller 3D Icon" class="game-logo">
+        <div class="game-tag">Android · 3D Platformer</div>
+        <h3>Ball Roller 3D</h3>
+        <p>A fast-paced 3D platformer where you roll a ball through 15 progressively challenging levels. Simple controls, addictive gameplay, built for all ages.</p>
+      </div>
+      <div class="game-card-features">
+        <span class="feat-chip">🕹️ Joystick + D-Pad</span>
+        <span class="feat-chip">⬆️ 15 Levels</span>
+        <span class="feat-chip">✅ Limited Ads</span>
+        <span class="feat-chip">👨‍👩‍👧 All Ages</span>
+      </div>
+      <img src="menu.webp" alt="Ball Roller 3D Menu Screenshot" class="game-screenshot">
+      <div class="game-card-footer">
+        <div class="card-actions">
+          <a class="btn-green" href="https://play.google.com/store/apps/details?id=com.G12Games.BallRoller" target="_blank" rel="noopener">▶ Google Play</a>
+        </div>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="game-card-header">
+        <span style="font-size:3rem;display:block;margin-bottom:0.8rem;">📚</span>
+        <div class="game-tag">Web App · EdTech</div>
+        <h3>Padhai 24x7</h3>
+        <p>India's quiz platform for ICSE Grade 10 students. Covers all major subjects with a chess-style ELO rating system, leaderboards, and instant feedback.</p>
+      </div>
+      <div class="game-card-features">
+        <span class="feat-chip">🏆 ELO Rankings</span>
+        <span class="feat-chip">📖 All ICSE Subjects</span>
+        <span class="feat-chip">⚡ Instant Feedback</span>
+        <span class="feat-chip">🆓 Free</span>
+      </div>
+      <div style="height:180px;background:linear-gradient(135deg,rgba(46,204,113,0.12),rgba(255,124,58,0.08));display:flex;align-items:center;justify-content:center;border-top:1px solid var(--border);">
+        <div style="text-align:center;color:var(--muted);font-size:0.9rem;"><span style="font-size:2.5rem;display:block;margin-bottom:0.5rem;">🎓</span>ICSE Quiz Platform</div>
+      </div>
+      <div class="game-card-footer">
+        <div class="card-actions">
+          <a class="btn-green" href="https://meet-167.github.io/padhai24x7/" target="_blank" rel="noopener">▶ Play Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<hr class="divider">
+
+<section id="articles">
+  <span class="section-label">Dev Blog</span>
+  <h2 class="section-title">Articles &amp; Insights</h2>
+  <p class="section-desc">Thoughts on game dev, web development, and what I've learned building real projects as a teen developer in India.</p>
+
+  <!-- ── ARTICLE 1 ── -->
+  <div class="article-full">
+    <div class="article-meta"><span class="article-cat cat-gamedev">Game Dev</span><span class="article-date">June 2025</span></div>
+    <h2>How I Built My First 3D Mobile Game at 15 — Lessons from Ball Roller 3D</h2>
+    <p>When I first opened Unity, I had no idea what a <strong>Rigidbody</strong> was. I just wanted to make something I could show my friends — something real, something playable. Eight months later, Ball Roller 3D was live on the Google Play Store. Here's what I actually learned building it from scratch.</p>
+    <h3>Start With the Simplest Possible Game Mechanic</h3>
+    <p>The biggest trap new game developers fall into is trying to build the next big hit on their first attempt. I avoided this (barely) by picking the simplest mechanic I could think of: roll a ball, don't fall off. That's it. The genius of simple mechanics is that they let you focus all your energy on <strong>making the feeling of play right</strong> before worrying about content, story, or systems.</p>
+    <p>In Ball Roller 3D, getting the physics to feel satisfying took weeks. The ball needed to feel heavy but responsive. Too much friction and it felt sluggish; too little and it was impossible to control. Tuning these tiny values — drag, angular drag, mass — taught me more about game feel than any tutorial I'd watched.</p>
+    <h3>Level Design Is Harder Than It Looks</h3>
+    <p>I designed 15 levels, and the difficulty curve was the hardest part to get right. Early on, my "easy" levels were confusing and my "hard" levels were just annoying rather than challenging. The difference between a hard level that feels fair and one that feels cheap is about <strong>visual clarity and consistent rules</strong>. If a player fails, they need to immediately understand why — and feel like they could do better with more skill.</p>
+    <p>I ended up playtesting each level dozens of times, and having a second developer (my co-dev) play through fresh to spot places where the design was unclear. Fresh eyes are invaluable. Never test your own game in isolation.</p>
+    <h3>The Reality of Publishing on Google Play</h3>
+    <p>The publishing process was surprisingly technical. Google requires a signed APK, a privacy policy (even for simple games), screenshot assets in multiple resolutions, and a content rating questionnaire. Building the store listing taught me a lot about <strong>app marketing</strong> — writing a description that actually explains the game, picking the right category, and optimizing for discoverability.</p>
+    <p>The most humbling moment? Watching the install count hover near zero for the first week. Organic discovery on the Play Store is brutally hard without any marketing budget. This pushed me to learn about ASO (App Store Optimization) and think more carefully about keywords and visuals.</p>
+    <h3>What I'd Do Differently</h3>
+    <ul>
+      <li>Start marketing <em>before</em> launch, not after</li>
+      <li>Add a tutorial level — new players needed more guidance than I realized</li>
+      <li>Use source control (Git) from day one — I lost work twice without it</li>
+      <li>Keep a dev log to track decisions and avoid repeating mistakes</li>
+    </ul>
+    <p>Building Ball Roller 3D was the best education I've had. No classroom teaches you how to ship. If you're thinking about making a game, start today — with the simplest idea you have. Done is better than perfect.</p>
+  </div>
+
+  <!-- ── ARTICLE 2 ── -->
+  <div class="article-full">
+    <div class="article-meta"><span class="article-cat cat-webdev">Web Dev</span><span class="article-date">July 2025</span></div>
+    <h2>Building Padhai 24x7: What I Learned Shipping a Web App for Students</h2>
+    <p>Padhai 24x7 started as a simple idea: what if studying for ICSE board exams felt less like a chore and more like a game? The ELO rating system — borrowed from chess — was the core hook. Here's how I built it and what surprised me along the way.</p>
+    <h3>Why Vanilla HTML/CSS/JS Still Wins for Small Projects</h3>
+    <p>A lot of beginner developers think they need React, Next.js, or some big framework to build anything real. For Padhai 24x7, I went with plain HTML, CSS, and JavaScript — and it was the right call. <strong>No build step, no dependencies to maintain, instant deployment via GitHub Pages.</strong> The entire project went from idea to live URL in a weekend.</p>
+    <p>The lesson: pick the simplest tool that solves the problem. Frameworks add power but also complexity, and when you're learning, complexity slows you down. Master the fundamentals first.</p>
+    <h3>Designing the ELO System for Learning</h3>
+    <p>The standard ELO formula adjusts a player's rating based on the expected vs actual outcome of a match. Adapting this for quizzes meant treating each question attempt as a "match" — a high-scoring quiz raises your ELO, a low-scoring one lowers it. The challenge was calibrating the K-factor (how much ratings shift per result) so changes felt meaningful but not volatile.</p>
+    <p>I also had to think carefully about <strong>fairness</strong>: a student who takes 50 quizzes shouldn't be unfairly punished by a single bad session. Adding a soft floor to the ELO and dampening changes for high-volume users made the system feel more motivating and less frustrating.</p>
+    <h3>Building for Real Users — Students Under Exam Pressure</h3>
+    <p>The UX decisions I made for Padhai 24x7 were different from anything I'd built before, because the users were stressed. Students preparing for board exams don't want friction — they want to open the app, pick a subject, and start practicing immediately. This meant:</p>
+    <ul>
+      <li>No sign-up required to start (progress saves automatically by name)</li>
+      <li>Large, readable question text on mobile</li>
+      <li>Instant feedback on every answer — no waiting until the end of the quiz</li>
+      <li>A summary screen with all correct answers so the quiz doubles as a study tool</li>
+    </ul>
+    <p>The biggest UX lesson: <strong>remove every step between a user's intention and the action.</strong> Every extra tap or click is a reason to leave.</p>
+    <h3>Hosting and Scaling on Zero Budget</h3>
+    <p>GitHub Pages hosts Padhai 24x7 completely free. For a static web app with no server-side logic, this is perfect. The trade-off is that all data lives in the browser (localStorage), which means leaderboards are local rather than global. A future version with a proper backend (Node.js + a lightweight database) would enable real cross-device leaderboards and persistent national rankings.</p>
+    <p>This experience taught me a lot about <strong>progressive enhancement</strong> — start with what you can ship, then improve it. A working product with local leaderboards is infinitely more valuable than a half-built app waiting for a perfect backend.</p>
+  </div>
+
+  <!-- ── ARTICLE 3 ── -->
+  <div class="article-full">
+    <div class="article-meta"><span class="article-cat cat-gamedev">Game Dev</span><span class="article-date">August 2025</span></div>
+    <h2>Unity vs Godot for Indie Developers: Which Engine Should You Pick?</h2>
+    <p>In 2023, Unity shocked the game development world by announcing a controversial runtime fee — a charge per install beyond a threshold, retroactively applied to existing games. The backlash was enormous. Thousands of indie developers migrated to Godot, an open-source engine that had quietly grown into a capable alternative. After working with Unity on Ball Roller 3D and experimenting with Godot for a side project, here's my honest comparison from a student developer's perspective.</p>
+    <h3>Unity: Powerful, Mature, and Industry-Standard</h3>
+    <p>Unity is the engine that most 3D mobile games are built with, and for good reason. The asset pipeline, the physics engine, and the documentation are all excellent. When I needed to implement Rigidbody physics for Ball Roller 3D, there were hundreds of tutorials, Stack Overflow answers, and YouTube guides available within seconds of Googling.</p>
+    <p><strong>Unity's biggest strength is its ecosystem.</strong> The Asset Store has thousands of plugins, animations, and tools that can save weeks of development time. For 3D mobile games especially, Unity's build pipeline for Android is well-tested and reliable. The IL2CPP backend produces fast native code and the APK build process is straightforward once you understand the steps.</p>
+    <p>The downsides: Unity is heavy. The editor takes time to load, and compilation times can be frustrating on a mid-range laptop. The free tier (Personal) is good for students, but some features are locked behind paid plans. And yes, the trust damage from the runtime fee controversy is real — even though Unity walked back most changes, the perception that Unity would change pricing without warning has made many developers cautious about long-term commitment.</p>
+    <h3>Godot: Lightweight, Free, and Surprisingly Capable</h3>
+    <p>Godot is open-source, which means it is free forever — no royalties, no runtime fees, no corporate agenda. The entire editor is under 100MB, remarkable compared to Unity. It boots fast and runs well even on low-spec hardware. Godot uses its own scripting language, GDScript, which is similar to Python and very beginner-friendly. There's also C# support for developers who prefer it. For 2D games, Godot is genuinely excellent — arguably better than Unity's 2D tooling. For 3D, Godot 4 made massive improvements but still trails Unity in maturity for mobile deployment.</p>
+    <h3>My Recommendation for Student Developers</h3>
+    <p>If you're making your first 3D mobile game and want to publish on Google Play, start with Unity. The learning resources are simply better and the Android build pipeline is more reliable. If you're making a 2D game — platformers, puzzle games, top-down shooters — try Godot. You'll be surprised how fast you can prototype ideas.</p>
+    <p>The best engine is the one you actually finish a project in. Don't spend months debating tools. Pick one, build something small, and ship it.</p>
+  </div>
+
+  <!-- ── ARTICLE 4 ── -->
+  <div class="article-full">
+    <div class="article-meta"><span class="article-cat cat-webdev">Web Dev</span><span class="article-date">August 2025</span></div>
+    <h2>Free Hosting for Student Projects: GitHub Pages, Netlify, Vercel, and More</h2>
+    <p>One of the most common questions from beginner web developers is: "Where do I host my project for free?" When I first wanted to put Padhai 24x7 online, I had no idea where to start. Here's a practical guide based on what I've actually used, tested, and deployed on.</p>
+    <h3>GitHub Pages — Best for Static Sites</h3>
+    <p>GitHub Pages is what I use for Padhai 24x7, and it's perfect for static websites — sites with no server-side logic, just HTML, CSS, and JavaScript. You push your code to a GitHub repository, enable Pages in the repo settings, and your site is live at <code>username.github.io/repo-name</code> within minutes. Completely free, no credit card required, automatic HTTPS, and deployment is just a push. The only limitation: static only. No Node.js, no databases, no server-side rendering.</p>
+    <h3>Netlify — The Upgrade from GitHub Pages</h3>
+    <p>Netlify does everything GitHub Pages does, but better. Automatic deployments on every Git push, instant rollbacks if something breaks, form handling without a backend, and serverless functions for light backend logic. The free tier is very generous. If I were rebuilding Padhai 24x7 today and wanted form submissions to actually work with email delivery, I'd use Netlify Forms — it requires zero backend code.</p>
+    <h3>Vercel — Perfect for React and Next.js</h3>
+    <p>Vercel is built by the team behind Next.js and is the default deployment choice for React apps. Connect your GitHub repo, and every pull request gets a live preview URL automatically. The free tier supports personal projects with reasonable limits. If you're learning React or building a portfolio with a modern JavaScript framework, Vercel makes deployment almost invisible.</p>
+    <h3>Railway and Render — When You Need a Real Backend</h3>
+    <p>For projects that need a Node.js server, a database, or a Python backend, Railway and Render are the best free options. Both support persistent deployments and can host databases like PostgreSQL. Railway has a small monthly free credit. Render's free tier spins down inactive services after inactivity, which causes a slow first load — but for student projects and portfolios, this trade-off is usually fine.</p>
+    <h3>My Recommendation</h3>
+    <p>Start with GitHub Pages or Netlify for everything static. When you need a backend, move to Render or Railway. Vercel is the right call the moment you start using React or Next.js seriously. None of these require a credit card for student-scale usage.</p>
+  </div>
+
+  <!-- ── ARTICLE 5 ── -->
+  <div class="article-full">
+    <div class="article-meta"><span class="article-cat cat-gamedev">Game Dev</span><span class="article-date">September 2025</span></div>
+    <h2>What Is Game Feel — And Why It Matters More Than Graphics</h2>
+    <p>I've played mobile games with beautiful 3D graphics that felt terrible to control, and I've played simple pixel-art games that felt so satisfying I couldn't put them down. The difference between them is something developers call <strong>game feel</strong> — and it's the single most underrated concept in game development.</p>
+    <h3>Defining Game Feel</h3>
+    <p>Game feel is the tactile, moment-to-moment sensation of interacting with a game. It's the slight screen shake when you land a jump. It's the subtle audio cue when you collect a coin. It's the way a character briefly squishes before launching into a jump. None of these things affect gameplay mechanically, but they all make the game feel alive, responsive, and satisfying. What matters is that the player's inputs feel connected to the world.</p>
+    <h3>The Five Tools of Game Feel</h3>
+    <p><strong>1. Responsive Input:</strong> There should be near-zero latency between a player's action and the game's response. Any delay makes controls feel "floaty" or disconnected. In Unity, this means keeping physics update rates consistent and avoiding unnecessary delays on movement code.</p>
+    <p><strong>2. Juice (Visual Feedback):</strong> "Juice" is the game dev term for visual feedback that makes actions feel rewarding — screen shake, particle effects, brief flashes of color. Even a simple ball rolling game benefits from dust particles kicking up when the ball skids on a sharp turn.</p>
+    <p><strong>3. Audio Feedback:</strong> Sound is half the feeling. A rolling ball with no sound feels wrong immediately. Adding a subtle rolling sound that changes pitch with speed transforms the experience. Free assets from sites like freesound.org are more than enough to make a huge difference.</p>
+    <p><strong>4. Weight and Momentum:</strong> Objects in games should feel like they have mass — they don't start or stop instantly. A ball should build momentum going downhill and resist sudden direction changes. Angular drag and linear drag settings in Unity's physics engine control this.</p>
+    <p><strong>5. Clear Cause and Effect:</strong> Every action should have an obvious, satisfying reaction. When you fall off a platform, the reason should be instantly readable. Clear feedback removes frustration and makes difficult levels feel fair rather than arbitrary.</p>
+    <h3>A Practical Experiment to Try</h3>
+    <p>Build a simple scene where a character jumps. Then add these one at a time: a squish-and-stretch animation on jump, a small dust particle on landing, a "boing" sound effect, and a brief camera shake on hard landings. Each change takes maybe 20 minutes, but together they make the game feel completely different. That's the power of game feel.</p>
+  </div>
+
+  <!-- ── ARTICLE 6 ── -->
+  <div class="article-full">
+    <div class="article-meta"><span class="article-cat cat-webdev">Web Dev</span><span class="article-date">September 2025</span></div>
+    <h2>CSS Grid vs Flexbox: When to Use Each One (With Real Examples)</h2>
+    <p>When I first learned CSS layout, I used Flexbox for everything. Then I learned Grid and started using that for everything instead. Eventually I realized the answer isn't either/or — they solve different problems and work best together. Here's how I think about it after building multiple web projects.</p>
+    <h3>The One-Sentence Explanation</h3>
+    <p><strong>Flexbox is for one-dimensional layout — either a row or a column.</strong> <strong>Grid is for two-dimensional layout — rows and columns at the same time.</strong> That's really all you need to remember. Everything else follows from this distinction.</p>
+    <h3>When Flexbox Is the Right Tool</h3>
+    <p>Use Flexbox when you're laying out items in a single direction and want them to respond to available space. Navigation bars are the classic example: items in a row, spaced evenly, that wrap gracefully on small screens. Button groups, form fields side by side, cards in a scrolling row — these are all Flexbox problems. Flexbox is also the modern standard for centering things: <code>display: flex; align-items: center; justify-content: center;</code> works reliably and is now the go-to approach.</p>
+    <h3>When Grid Is the Right Tool</h3>
+    <p>Use Grid when you have a two-dimensional layout where rows and columns need to align with each other. Page layouts — header, sidebar, main content, footer — are Grid problems. So are image galleries where you want photos to align in a strict grid. The game cards on this page use <code>grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))</code>, which creates a responsive grid that automatically adjusts the number of columns based on available space.</p>
+    <p>Grid also lets you overlap elements, create asymmetric layouts, and place items in specific named areas — things that are very difficult with Flexbox alone.</p>
+    <h3>Using Both Together</h3>
+    <p>Most real-world layouts use both. Grid handles the macro layout — the big sections of the page. Flexbox handles the micro layout — the contents inside each section. For example: Grid lays out a card grid, Flexbox arranges the content (icon, title, description, button) inside each card vertically. This pattern appears everywhere once you start looking for it.</p>
+    <p>The best way to get comfortable with both is to open browser DevTools, inspect real websites you admire, and see which one they're using where. CSS layout is a skill you build by reading code, not just writing it.</p>
+  </div>
+
+  <!-- ── ARTICLE 7 ── -->
+  <div class="article-full">
+    <div class="article-meta"><span class="article-cat cat-gamedev">Game Dev</span><span class="article-date">October 2025</span></div>
+    <h2>How to Monetize a Mobile Game Without Destroying the Player Experience</h2>
+    <p>Monetization is one of the most uncomfortable topics in indie game development, especially for small developers who genuinely care about the games they make. I thought about this carefully while building Ball Roller 3D, and I want to share the framework I landed on — one that respects players while still allowing the game to generate some revenue.</p>
+    <h3>The Spectrum of Mobile Monetization</h3>
+    <p>Mobile game monetization runs from completely ethical to genuinely predatory. On the good end: a one-time purchase, an optional cosmetic store, or minimal rewarded ads. On the bad end: energy timers designed to frustrate players into paying, loot boxes targeting compulsive spending, and interstitial ads that interrupt gameplay every 60 seconds. As an indie developer, you have full control over where on this spectrum your game lands.</p>
+    <h3>The Three Models Worth Considering for Indie Games</h3>
+    <p><strong>Paid upfront:</strong> Charge a small price (₹50–₹200 in India) to download the game. No ads, no IAP. Players who pay are committed and more likely to leave positive reviews. The downside is a much smaller download volume — most mobile users won't pay for apps they haven't tried.</p>
+    <p><strong>Free with rewarded ads:</strong> The game is free, but players can watch optional video ads to earn extra lives, hints, or skip a difficult level. This is the model I used for Ball Roller 3D. The key word is <em>optional</em> — players who never watch an ad should still be able to finish the game. Forced or interstitial ads are the version of this model that players despise.</p>
+    <p><strong>Free with a one-time unlock:</strong> The core game is free; a one-time in-app purchase removes ads and unlocks extra content. This rewards players who love the game while keeping the barrier to entry at zero. It's the model I'd recommend for most indie platformers because it aligns the developer's incentives with the player's experience — you only get paid if the game is good enough that someone wants to keep playing.</p>
+    <h3>What I'd Do on My Next Game</h3>
+    <p>On my next game, I'd launch free with optional rewarded ads, add a ₹99 "remove ads + bonus levels" IAP, and focus all energy on making the base game so good that players <em>want</em> to support it. Build something people love first. The monetization should feel like a thank-you, not an obstacle.</p>
+  </div>
+
+  <!-- ── ARTICLE 8 ── -->
+  <div class="article-full">
+    <div class="article-meta"><span class="article-cat cat-webdev">Web Dev</span><span class="article-date">October 2025</span></div>
+    <h2>JavaScript Fundamentals Every Self-Taught Developer Needs to Actually Understand</h2>
+    <p>I learned JavaScript mostly by copying code from tutorials and Stack Overflow until things worked. This approach gets you surprisingly far — but it leaves gaps. There are concepts that trip up every self-taught developer until they finally sit down and understand them properly. Here are the five I struggled with most.</p>
+    <h3>1. The Difference Between var, let, and const</h3>
+    <p>Don't use <code>var</code>. It has function scope and gets "hoisted" in ways that cause subtle bugs. Use <code>const</code> for values that don't change (most things), and <code>let</code> for values that do (loop counters, state that gets updated). If you're unsure, start with <code>const</code> and change it to <code>let</code> if you get an assignment error.</p>
+    <h3>2. How <code>this</code> Works (and Why It Breaks)</h3>
+    <p><code>this</code> refers to the object currently executing the function — but what that object is depends on <em>how</em> the function is called, not where it was defined. The most common bug: passing a method as a callback and losing the original <code>this</code> context. The fix is arrow functions, which inherit <code>this</code> from their enclosing scope. When in doubt, use arrow functions for callbacks.</p>
+    <h3>3. Asynchronous Code and Promises</h3>
+    <p>JavaScript runs on a single thread, but many operations take time — fetching data from an API, waiting for user input. JavaScript handles this with an event loop and asynchronous code. Promises represent a value that will be available in the future. The modern syntax, <code>async/await</code>, makes asynchronous code look synchronous and is much easier to read than chained <code>.then()</code> calls. Learn <code>async/await</code> early — you'll use it constantly in real projects.</p>
+    <h3>4. Array Methods: map, filter, and reduce</h3>
+    <p>Most beginner JavaScript developers write <code>for</code> loops for everything. Array methods are more expressive and less error-prone. <code>map()</code> transforms every element of an array and returns a new array. <code>filter()</code> returns a new array containing only elements that pass a test. <code>reduce()</code> accumulates all elements into a single value. These three methods cover the vast majority of array operations you'll encounter in real code.</p>
+    <h3>5. The DOM Is Just an Object Tree</h3>
+    <p>The HTML of a webpage is represented in memory as a tree of JavaScript objects — the Document Object Model. Every element is an object with properties you can read and modify. When you call <code>document.getElementById('myDiv').style.color = 'red'</code>, you're just setting a property on a JavaScript object. Understanding this mental model makes DOM manipulation feel natural instead of magical.</p>
+  </div>
+
+  <!-- ── ARTICLE 9 ── -->
+  <div class="article-full">
+    <div class="article-meta"><span class="article-cat cat-gamedev">Game Dev</span><span class="article-date">November 2025</span></div>
+    <h2>How to Design a Good Difficulty Curve for a Mobile Game</h2>
+    <p>Getting difficulty right is one of the hardest design challenges in game development. Too easy and players get bored. Too hard and they quit. After designing 15 levels for Ball Roller 3D and watching playtests go both right and horribly wrong, here's what I've actually learned.</p>
+    <h3>The Flow State: Where Good Games Live</h3>
+    <p>Hungarian psychologist Mihaly Csikszentmihalyi described "flow" as a mental state of complete absorption — the feeling of being in the zone. Games can reliably induce this state when difficulty is calibrated so that the challenge is <em>just</em> beyond the player's current skill. Too far below their skill and they're bored; too far above and they're frustrated. For a 15-level game, the first few levels should be almost trivially easy — not to insult intelligence, but to teach controls and rules without pressure.</p>
+    <h3>Introduce One Thing at a Time</h3>
+    <p>Each level in Ball Roller 3D was designed to introduce or emphasize a single new challenge. Level 3 introduces the first moving obstacle. Level 7 introduces a narrower path. Level 11 combines narrow paths with moving obstacles for the first time. This principle — introduce concepts one at a time, then combine them later — keeps the game feeling fair even as it gets harder. When I violated this principle (usually because I thought a level was getting boring), players got confused and frustrated.</p>
+    <h3>Playtesting Is Not Optional</h3>
+    <p>I cannot overstate how wrong my difficulty estimates were before playtesting. Levels I thought were easy were genuinely hard for fresh players. Levels I worried were too hard turned out fine once players got used to the controls. You are the worst possible judge of your own game's difficulty because you've played it hundreds of times. Get at least three people who have never seen your game to play through it, and <em>watch</em> them — don't give hints, just observe where they get stuck.</p>
+    <h3>Give Players a Sense of Progress</h3>
+    <p>Even when a level is hard, players will keep trying if they feel like they're making progress. Visual indicators (level numbers, percentage complete), small mid-level checkpoints, and clear signs that the end is near all help. The worst experience is a long, hard level where you can't tell how close you are to finishing. Keep players informed, and they'll keep playing.</p>
+  </div>
+
+  <!-- ── ARTICLE 10 ── -->
+  <div class="article-full">
+    <div class="article-meta"><span class="article-cat cat-webdev">Web Dev</span><span class="article-date">November 2025</span></div>
+    <h2>Git for Beginners: The Concepts That Actually Matter When You're Starting Out</h2>
+    <p>I lost two weeks of game development work because I didn't use Git. The hard drive didn't die, I didn't get hacked — I just made a series of bad edits, couldn't undo them, and had no backup. That experience motivated me to actually learn Git properly, and it's now one of the most valuable tools in my workflow. Here's the conceptual foundation I wish I'd had from the start.</p>
+    <h3>What Git Actually Is</h3>
+    <p>Git is a version control system — software that tracks every change you make to a set of files over time. Think of it as an unlimited undo history for your entire project, with the ability to branch off into experiments without affecting your main work. GitHub is not Git — GitHub is a website that hosts Git repositories online, making it easy to share code and back it up remotely. You can use Git without GitHub (locally only), but using them together is standard practice.</p>
+    <h3>The Three States of Git</h3>
+    <p>Every file in a Git repository is in one of three states. <strong>Modified</strong> means you've changed the file but haven't told Git about it yet. <strong>Staged</strong> means you've marked the changes to include in the next commit. <strong>Committed</strong> means the changes are safely saved in the local repository history. The workflow is: edit files → stage changes (<code>git add</code>) → commit (<code>git commit</code>). That's the core loop, and it's most of what you'll ever do.</p>
+    <h3>Branches: Your Safety Net for Experiments</h3>
+    <p>A branch is an independent copy of your code where you can experiment without affecting the main version. Create a branch: <code>git checkout -b new-feature</code>. If the experiment works, merge it back into main. If it doesn't, delete the branch and nothing is lost. I use branches for every significant feature change in my projects now — it's saved me from bad decisions multiple times.</p>
+    <h3>The Five Git Commands You Need Every Day</h3>
+    <ol>
+      <li><code>git status</code> — see what's changed</li>
+      <li><code>git add .</code> — stage all changes</li>
+      <li><code>git commit -m "message"</code> — save a snapshot with a description</li>
+      <li><code>git push</code> — upload commits to GitHub</li>
+      <li><code>git pull</code> — download the latest changes</li>
+    </ol>
+    <p>That's honestly most of what you need for solo projects. Don't let tutorials overwhelm you with rebase, cherry-pick, and advanced merge strategies before you've built the habit of committing regularly. Commit early, commit often, write meaningful messages. That discipline alone puts you ahead of most beginner developers.</p>
+  </div>
+
+  <!-- ── ARTICLE 11 ── -->
+  <div class="article-full">
+    <div class="article-meta"><span class="article-cat cat-career">Dev Life</span><span class="article-date">December 2025</span></div>
+    <h2>Learning to Code at 15: What Actually Works (And What Doesn't)</h2>
+    <p>I've been coding since I was 10, starting with Scratch and working my way up to Unity, JavaScript, Java, and Python. Along the way I've tried a lot of different learning approaches — some that accelerated my progress enormously, and some that wasted months of time. Here's what I've actually found to work.</p>
+    <h3>What Doesn't Work: Tutorial Hell</h3>
+    <p>"Tutorial hell" is when you spend months watching coding tutorials and following along, but never feel ready to build something on your own. The problem is that following a tutorial feels like learning, but it isn't really — you're transcribing someone else's decisions, not making your own. You can follow 50 Unity tutorials and still freeze when faced with a blank project. The cure: give yourself projects with no tutorial to follow. Even small ones. Build a simple calculator. Make a quiz about your favorite topic. Clone a game mechanic you like. You'll get stuck, and the process of getting unstuck is where real learning happens.</p>
+    <h3>What Works: Build Something You Actually Want</h3>
+    <p>My progress accelerated dramatically when I stopped doing generic exercises and started building things I genuinely wanted to exist. Ball Roller 3D was a game I would have played. Padhai 24x7 was a study tool I would have used. The motivation to finish a project you care about pushes you through the confusing parts that would make you quit a "learn to code" exercise.</p>
+    <h3>What Works: Reading Other People's Code</h3>
+    <p>Open-source projects on GitHub are an underused learning resource. Find a small project in a language you know, read through the code, and try to understand every line. Where you don't understand something, Google it. This teaches you patterns and idioms that tutorials rarely cover — things like how experienced developers structure files, name variables, and handle errors gracefully.</p>
+    <h3>A Note for Other Young Developers in India</h3>
+    <p>Age is less of a barrier to coding than most people think. The internet doesn't care how old you are. Your GitHub doesn't show your age. Your apps on the Play Store are judged by users who just want a good app, not by your birth year. Being young means you have more time to build, more tolerance for failure, and less to lose from experimenting. Use that. Ship things. Break things. Read widely. The developer community, at its best, is one of the most generous and collaborative communities in the world.</p>
+  </div>
+
+  <!-- ── ARTICLE 12 ── -->
+  <div class="article-full">
+    <div class="article-meta"><span class="article-cat cat-gamedev">Game Dev</span><span class="article-date">January 2026</span></div>
+    <h2>Understanding Unity's Physics Engine: A Practical Guide for Beginners</h2>
+    <p>Unity's physics system is built on Nvidia PhysX and handles the simulation of rigid body dynamics — how objects with mass, velocity, and forces interact with each other and the environment. For a game like Ball Roller 3D, the physics engine is essentially the entire gameplay system. Getting comfortable with how it works makes the difference between a game that feels good and one that feels broken.</p>
+    <h3>The Rigidbody Component</h3>
+    <p>Any GameObject that should be affected by physics needs a Rigidbody component. It stores the object's mass, velocity, angular velocity, drag, and angular drag. The most important properties for a ball game: <strong>Mass</strong> affects how forces change velocity (heavier objects accelerate slower). <strong>Drag</strong> is like air resistance — it slows linear movement. <strong>Angular Drag</strong> slows rotational movement. For Ball Roller 3D, I used low drag values so the ball built up speed naturally on slopes, with enough angular drag to prevent it spinning uncontrollably.</p>
+    <h3>Forces vs Direct Velocity Changes</h3>
+    <p>There are two main ways to move a Rigidbody: applying forces (<code>rb.AddForce()</code>) or setting velocity directly (<code>rb.velocity = new Vector3(...)</code>). Forces are more physically accurate — they interact with mass, drag, and other physics objects naturally. Direct velocity changes are more predictable and responsive, but can feel "snappy" or unphysical. For player-controlled movement in Ball Roller 3D, I used a hybrid: apply forces for most movement, but cap the maximum velocity to prevent the ball getting out of control on steep descents.</p>
+    <h3>Collision Detection Modes</h3>
+    <p>Unity offers three collision detection modes. Discrete is the default and checks for collisions at fixed time intervals — fast objects can "tunnel" through thin walls. Continuous prevents tunneling for the object against static geometry. Continuous Dynamic prevents tunneling against both static and dynamic objects. For a fast-moving ball on narrow platforms, Continuous mode is important. Early in development, Ball Roller 3D had a bug where the ball would occasionally fall through thin platform edges at high speed — switching to Continuous collision detection fixed it immediately.</p>
+    <h3>FixedUpdate vs Update</h3>
+    <p>Physics code in Unity should almost always go in <code>FixedUpdate()</code>, not <code>Update()</code>. <code>Update()</code> runs every frame, which varies with framerate. <code>FixedUpdate()</code> runs at a fixed time interval (50 times per second by default) that is independent of framerate. Applying forces in <code>Update()</code> means the game behaves differently on a 30fps phone versus a 60fps phone. Putting physics in <code>FixedUpdate()</code> keeps behavior consistent across all devices — this is one of the most common beginner mistakes in Unity and one of the easiest to fix once you know about it.</p>
+  </div>
+
+</section>
+<hr class="divider">
+
+<!-- CONTACT -->
+<section id="contact">
+  <span class="section-label">Contact</span>
+  <h2 class="section-title">Let's Talk</h2>
+  <p class="section-desc">Game feedback, collab ideas, questions about my code — I read everything.</p>
+  <div class="contact-wrapper">
+    <div class="contact-info">
+      <h3>Reach Out</h3>
+      <p>Whether you've played one of my games, have a bug report, a collab idea, or just want to chat about game dev — my inbox is open.</p>
+      <div class="contact-item">
+        <div class="contact-icon">✉️</div>
+        <div class="contact-item-text">
+          <div class="label">Email</div>
+          <a href="mailto:garygaming982@gmail.com">garygaming982@gmail.com</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">🎮</div>
+        <div class="contact-item-text">
+          <div class="label">Google Play</div>
+          <a href="https://play.google.com/store/apps/developer?id=G12+Games" target="_blank" rel="noopener">G12 Games on Play Store</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div class="contact-item-text">
+          <div class="label">Location</div>
+          <span style="color:var(--text);font-size:0.93rem;font-weight:500;">Maharashtra, India 🇮🇳</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h3>Send a Message</h3>
+      <div id="form-fields">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cf-name">Your Name</label>
+            <input type="text" id="cf-name" placeholder="Alex" autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="cf-email">Your Email</label>
+            <input type="email" id="cf-email" placeholder="you@example.com" autocomplete="email" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="cf-topic">Topic</label>
+          <select id="cf-topic">
+            <option value="">Select a topic…</option>
+            <option value="Game Feedback">Game Feedback</option>
+            <option value="Bug Report">Bug Report</option>
+            <option value="Collaboration">Collaboration</option>
+            <option value="General Question">General Question</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" placeholder="Your message here…"></textarea>
+        </div>
+        <p id="form-err"></p>
+        <button class="btn-primary" id="submit-btn" onclick="handleContact(event)">Send Message →</button>
+      </div>
+      <div id="form-success" class="form-success-box">
+        <p>✅ <strong>Message received!</strong> Thanks for reaching out — I'll reply to <strong id="success-email"></strong> as soon as I can, usually within a day or two!</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer>
   <span class="footer-logo">G12 Games</span>
   <div class="footer-links">
-    <a href="index.html#about">About</a>
-    <a href="index.html#games">Games</a>
-    <a href="index.html#articles">Articles</a>
-    <a href="index.html#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="#games">Games</a>
+    <a href="#articles">Articles</a>
+    <a href="#contact">Contact</a>
     <a href="mailto:garygaming982@gmail.com">Email</a>
-    <a href="privacy-policy.html">Privacy Policy</a>
-    <a href="terms-of-service.html">Terms of Service</a>
   </div>
-  <p>© 2026 G12 Games · Made with ❤️ by a teen developer from Maharashtra, India</p>
+  <p>© 2025 G12 Games · Made with ❤️ by a teen developer from Maharashtra, India</p>
 </footer>
+
+<style>
+  #form-err { font-size: 0.83rem; color: #e74c3c; margin-bottom: 0.7rem; min-height: 1.2em; }
+  .field-error { border-color: #e74c3c !important; }
+  .form-success-box { background: rgba(46,204,113,0.1); border: 1px solid rgba(46,204,113,0.3); border-radius: 10px; padding: 1.4rem 1.6rem; display: none; margin-top: 0.5rem; }
+  .form-success-box p { color: var(--green); margin: 0; font-size: 0.95rem; }
+</style>
+
+<script>
+  function clearErrors() {
+    ['cf-name','cf-email','cf-topic','cf-message'].forEach(function(id) {
+      document.getElementById(id).classList.remove('field-error');
+    });
+    document.getElementById('form-err').textContent = '';
+  }
+
+  function showError(fieldId, msg) {
+    clearErrors();
+    var field = document.getElementById(fieldId);
+    field.classList.add('field-error');
+    document.getElementById('form-err').textContent = msg;
+    field.focus();
+  }
+
+  function handleContact(e) {
+    e.preventDefault();
+    clearErrors();
+
+    var name    = document.getElementById('cf-name').value.trim();
+    var email   = document.getElementById('cf-email').value.trim();
+    var topic   = document.getElementById('cf-topic').value;
+    var message = document.getElementById('cf-message').value.trim();
+
+    if (!name) { showError('cf-name', 'Please enter your name.'); return; }
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('cf-email', 'Please enter a valid email address.'); return; }
+    if (!topic) { showError('cf-topic', 'Please select a topic.'); return; }
+    if (!message || message.length < 10) { showError('cf-message', 'Please write a message (at least 10 characters).'); return; }
+
+    // Simulate a brief sending delay for realism
+    var btn = document.getElementById('submit-btn');
+    btn.textContent = 'Sending…';
+    btn.style.opacity = '0.7';
+    btn.disabled = true;
+
+    setTimeout(function() {
+      document.getElementById('success-email').textContent = email;
+      document.getElementById('form-fields').style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+
+      // Save to localStorage as a local record
+      try {
+        var saved = JSON.parse(localStorage.getItem('g12_messages') || '[]');
+        saved.push({ name: name, email: email, topic: topic, message: message, sent: new Date().toISOString() });
+        localStorage.setItem('g12_messages', JSON.stringify(saved));
+      } catch(ex) {}
+    }, 900);
+  }
+</script>
 
 </body>
 </html>
