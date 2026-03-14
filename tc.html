@@ -94,30 +94,12 @@
     .article-full strong { color: var(--text); }
     .article-full code { background: var(--bg3); border: 1px solid var(--border); border-radius: 4px; padding: 0.1rem 0.4rem; font-size: 0.88rem; color: var(--accent2); font-family: monospace; }
 
-    .contact-wrapper { background: var(--bg2); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; display: grid; grid-template-columns: 1fr 1.4fr; }
-    @media (max-width: 700px) { .contact-wrapper { grid-template-columns: 1fr; } }
-    .contact-info { background: linear-gradient(135deg, rgba(255,124,58,0.12) 0%, transparent 60%); padding: 3rem 2rem; border-right: 1px solid var(--border); }
-    .contact-info h3 { font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 800; margin-bottom: 0.8rem; }
-    .contact-info p { color: var(--muted); margin-bottom: 2rem; font-size: 0.95rem; }
+    .contact-simple { display: flex; flex-direction: column; gap: 0; max-width: 480px; }
     .contact-item { display: flex; align-items: flex-start; gap: 0.9rem; margin-bottom: 1.4rem; }
     .contact-icon { width: 38px; height: 38px; background: rgba(255,124,58,0.12); border: 1px solid rgba(255,124,58,0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
     .contact-item-text .label { font-size: 0.78rem; color: var(--muted); font-weight: 500; margin-bottom: 0.1rem; }
     .contact-item-text a { color: var(--text); text-decoration: none; font-weight: 500; font-size: 0.93rem; }
     .contact-item-text a:hover { color: var(--accent); }
-    .contact-form { padding: 3rem 2rem; }
-    .contact-form h3 { font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 700; margin-bottom: 1.5rem; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 0; }
-    @media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } }
-    .form-group { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
-    .form-group label { font-size: 0.82rem; font-weight: 600; color: var(--muted); letter-spacing: 0.3px; }
-    .form-group input, .form-group textarea, .form-group select { background: var(--bg3); border: 1px solid var(--border); border-radius: 8px; padding: 0.7rem 1rem; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 0.9rem; outline: none; transition: border-color 0.2s; width: 100%; }
-    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--accent); }
-    .form-group textarea { resize: vertical; min-height: 110px; }
-    .form-group select option { background: var(--bg3); }
-    .field-error { border-color: #e74c3c !important; }
-    #form-err { color: #e74c3c; font-size: 0.83rem; margin-bottom: 0.8rem; display: none; }
-    .form-success-box { background: rgba(46,204,113,0.1); border: 1px solid rgba(46,204,113,0.3); border-radius: 10px; padding: 1.4rem 1.6rem; display: none; margin-top: 0.5rem; }
-    .form-success-box p { color: var(--green); margin: 0; font-size: 0.95rem; font-weight: 500; }
 
     footer { border-top: 1px solid var(--border); padding: 2.5rem 2rem; text-align: center; color: var(--muted); font-size: 0.85rem; }
     footer .footer-logo { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 800; color: var(--accent); margin-bottom: 0.6rem; display: block; }
@@ -138,6 +120,7 @@
     <li><a href="#articles">Articles</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+
 </nav>
 
 <div class="hero">
@@ -146,7 +129,7 @@
   <p class="hero-sub">I'm a self-taught indie developer crafting mobile games and web apps from scratch. Welcome to G12 Games.</p>
   <div class="hero-ctas">
     <a href="#games" class="btn-primary">🎮 See My Games</a>
-    <a href="#contact" class="btn-secondary">✉️ Get in Touch</a>
+    <a href="mailto:garygaming982@gmail.com" class="btn-secondary">✉️ Get in Touch</a>
   </div>
 </div>
 <hr class="divider">
@@ -460,67 +443,27 @@
 <section id="contact">
   <span class="section-label">Contact</span>
   <h2 class="section-title">Let's Talk</h2>
-  <p class="section-desc">Game feedback, collab ideas, questions about my code — I read everything.</p>
-  <div class="contact-wrapper">
-    <div class="contact-info">
-      <h3>Reach Out</h3>
-      <p>Whether you've played one of my games, have a bug report, a collab idea, or just want to chat about game dev — my inbox is open.</p>
-      <div class="contact-item">
-        <div class="contact-icon">✉️</div>
-        <div class="contact-item-text">
-          <div class="label">Email</div>
-          <a href="mailto:garygaming982@gmail.com">garygaming982@gmail.com</a>
-        </div>
-      </div>
-      <div class="contact-item">
-        <div class="contact-icon">🎮</div>
-        <div class="contact-item-text">
-          <div class="label">Google Play</div>
-          <a href="https://play.google.com/store/apps/developer?id=G12+Games" target="_blank" rel="noopener">G12 Games on Play Store</a>
-        </div>
-      </div>
-      <div class="contact-item">
-        <div class="contact-icon">📍</div>
-        <div class="contact-item-text">
-          <div class="label">Location</div>
-          <span style="color:var(--text);font-size:0.93rem;font-weight:500;">Maharashtra, India 🇮🇳</span>
-        </div>
+  <p class="section-desc">Game feedback, collab ideas, questions about my code — my inbox is open.</p>
+  <div class="contact-simple">
+    <div class="contact-item">
+      <div class="contact-icon">✉️</div>
+      <div class="contact-item-text">
+        <div class="label">Email</div>
+        <a href="mailto:garygaming982@gmail.com">garygaming982@gmail.com</a>
       </div>
     </div>
-
-    <div class="contact-form">
-      <h3>Send a Message</h3>
-      <div id="form-fields">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="cf-name">Your Name</label>
-            <input type="text" id="cf-name" placeholder="Alex" autocomplete="name" />
-          </div>
-          <div class="form-group">
-            <label for="cf-email">Your Email</label>
-            <input type="email" id="cf-email" placeholder="you@example.com" autocomplete="email" />
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="cf-topic">Topic</label>
-          <select id="cf-topic">
-            <option value="">Select a topic…</option>
-            <option value="Game Feedback">Game Feedback</option>
-            <option value="Bug Report">Bug Report</option>
-            <option value="Collaboration">Collaboration</option>
-            <option value="General Question">General Question</option>
-            <option value="Other">Other</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="cf-message">Message</label>
-          <textarea id="cf-message" placeholder="Your message here…"></textarea>
-        </div>
-        <p id="form-err"></p>
-        <button class="btn-primary" id="submit-btn" onclick="handleContact(event)">Send Message →</button>
+    <div class="contact-item">
+      <div class="contact-icon">🎮</div>
+      <div class="contact-item-text">
+        <div class="label">Google Play</div>
+        <a href="https://play.google.com/store/apps/developer?id=G12+Games" target="_blank" rel="noopener">G12 Games on Play Store</a>
       </div>
-      <div id="form-success" class="form-success-box">
-        <p>✅ <strong>Message received!</strong> Thanks for reaching out — I'll reply to <strong id="success-email"></strong> as soon as I can, usually within a day or two!</p>
+    </div>
+    <div class="contact-item">
+      <div class="contact-icon">📍</div>
+      <div class="contact-item-text">
+        <div class="label">Location</div>
+        <span style="color:var(--text);font-size:0.93rem;font-weight:500;">Maharashtra, India 🇮🇳</span>
       </div>
     </div>
   </div>
@@ -534,67 +477,8 @@
     <a href="#articles">Articles</a>
     <a href="#contact">Contact</a>
     <a href="mailto:garygaming982@gmail.com">Email</a>
+    <a href="https://meet-167.github.io/ppolicy.html" target="_blank" rel="noopener">Privacy Policy</a>
+    <a href="https://meet-167.github.io/ts.html" target="_blank" rel="noopener">Terms &amp; Conditions</a>
   </div>
   <p>© 2025 G12 Games · Made with ❤️ by a teen developer from Maharashtra, India</p>
 </footer>
-
-<style>
-  #form-err { font-size: 0.83rem; color: #e74c3c; margin-bottom: 0.7rem; min-height: 1.2em; }
-  .field-error { border-color: #e74c3c !important; }
-  .form-success-box { background: rgba(46,204,113,0.1); border: 1px solid rgba(46,204,113,0.3); border-radius: 10px; padding: 1.4rem 1.6rem; display: none; margin-top: 0.5rem; }
-  .form-success-box p { color: var(--green); margin: 0; font-size: 0.95rem; }
-</style>
-
-<script>
-  function clearErrors() {
-    ['cf-name','cf-email','cf-topic','cf-message'].forEach(function(id) {
-      document.getElementById(id).classList.remove('field-error');
-    });
-    document.getElementById('form-err').textContent = '';
-  }
-
-  function showError(fieldId, msg) {
-    clearErrors();
-    var field = document.getElementById(fieldId);
-    field.classList.add('field-error');
-    document.getElementById('form-err').textContent = msg;
-    field.focus();
-  }
-
-  function handleContact(e) {
-    e.preventDefault();
-    clearErrors();
-
-    var name    = document.getElementById('cf-name').value.trim();
-    var email   = document.getElementById('cf-email').value.trim();
-    var topic   = document.getElementById('cf-topic').value;
-    var message = document.getElementById('cf-message').value.trim();
-
-    if (!name) { showError('cf-name', 'Please enter your name.'); return; }
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('cf-email', 'Please enter a valid email address.'); return; }
-    if (!topic) { showError('cf-topic', 'Please select a topic.'); return; }
-    if (!message || message.length < 10) { showError('cf-message', 'Please write a message (at least 10 characters).'); return; }
-
-    // Simulate a brief sending delay for realism
-    var btn = document.getElementById('submit-btn');
-    btn.textContent = 'Sending…';
-    btn.style.opacity = '0.7';
-    btn.disabled = true;
-
-    setTimeout(function() {
-      document.getElementById('success-email').textContent = email;
-      document.getElementById('form-fields').style.display = 'none';
-      document.getElementById('form-success').style.display = 'block';
-
-      // Save to localStorage as a local record
-      try {
-        var saved = JSON.parse(localStorage.getItem('g12_messages') || '[]');
-        saved.push({ name: name, email: email, topic: topic, message: message, sent: new Date().toISOString() });
-        localStorage.setItem('g12_messages', JSON.stringify(saved));
-      } catch(ex) {}
-    }, 900);
-  }
-</script>
-
-</body>
-</html>
