@@ -1,143 +1,826 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9150794931764555"
-     crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9150794931764555" crossorigin="anonymous"></script>
   <meta charset="UTF-8" />
   <meta name="google-site-verification" content="mvi-V_8YpIJur5pu48FlfPEpYr2J3ztghcE9Vc-DaSU" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>G12 Games</title>
+  <meta name="description" content="G12 Games — indie game and web development studio run by a 15-year-old developer from Maharashtra, India. Creator of Ball Roller 3D and Padhai 24x7." />
+  <meta name="keywords" content="G12 Games, Ball Roller 3D, indie game developer, ICSE quiz, Padhai 24x7, teen developer India, game development, web development" />
+  <meta property="og:title" content="G12 Games — Indie Dev from India" />
+  <meta property="og:description" content="Games, quizzes, and dev articles from a 15-year-old developer in Maharashtra, India." />
+  <title>G12 Games — Indie Dev from Maharashtra, India</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg: #0d0f14;
+      --bg2: #13161e;
+      --bg3: #1a1e2a;
+      --accent: #ff7c3a;
+      --accent2: #ffb347;
+      --green: #2ecc71;
+      --green-dark: #27ae60;
+      --text: #e8eaf0;
+      --muted: #7a7f94;
+      --border: #232737;
+      --card-glow: rgba(255, 124, 58, 0.08);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
     body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background: #111;
-      color: #f4f4f4;
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 16px;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(13,15,20,0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
       display: flex;
-      flex-direction: column;
       align-items: center;
-      padding: 2rem;
+      justify-content: space-between;
+      padding: 0 2rem;
+      height: 62px;
     }
-    header {
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: var(--accent);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+    .nav-logo span { color: var(--text); }
+    .nav-links { display: flex; gap: 0.25rem; list-style: none; }
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      transition: color 0.2s, background 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); background: var(--bg3); }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 7rem 2rem 5rem;
       text-align: center;
-      margin-bottom: 2rem;
     }
-    h1 {
-      font-size: 3rem;
-      color: #ff9933;
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 50% at 50% -10%, rgba(255,124,58,0.18) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 30% at 80% 60%, rgba(255,179,71,0.07) 0%, transparent 60%);
+      pointer-events: none;
     }
-    p {
-      font-size: 1.2rem;
-      color: #ccc;
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255,124,58,0.12);
+      border: 1px solid rgba(255,124,58,0.3);
+      border-radius: 999px;
+      padding: 0.35rem 1rem;
+      font-size: 0.82rem;
+      color: var(--accent2);
+      margin-bottom: 1.8rem;
+      font-weight: 500;
+      letter-spacing: 0.3px;
     }
-    .game-section {
-      background: #222;
-      border-radius: 1rem;
-      padding: 2rem;
-      max-width: 800px;
+    .hero h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2.6rem, 7vw, 5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -2px;
+      margin-bottom: 1.2rem;
+    }
+    .hero h1 .accent { color: var(--accent); }
+    .hero-sub {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: var(--muted);
+      max-width: 560px;
+      margin: 0 auto 2.5rem;
+      font-weight: 300;
+    }
+    .hero-ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.75rem 1.6rem;
+      background: var(--accent);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover { background: #e86b28; transform: translateY(-1px); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.75rem 1.6rem;
+      background: transparent;
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--accent); background: rgba(255,124,58,0.06); }
+
+    /* ── SECTION LAYOUT ── */
+    section { padding: 5rem 1.5rem; max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+    .section-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 0.8rem;
+      line-height: 1.15;
+    }
+    .section-desc {
+      color: var(--muted);
+      max-width: 600px;
+      margin-bottom: 3rem;
+    }
+    hr.divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 0;
+    }
+
+    /* ── ABOUT ── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    @media (max-width: 680px) { .about-grid { grid-template-columns: 1fr; gap: 2rem; } }
+    .about-text p { color: var(--muted); margin-bottom: 1rem; }
+    .about-text p:last-child { margin-bottom: 0; }
+    .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .stat-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.4rem;
       text-align: center;
-      box-shadow: 0 0 20px rgba(255, 153, 51, 0.2);
     }
-    .game-section img {
-      max-width: 90%;
-      border-radius: 0.5rem;
-      margin-bottom: 1rem;
-    }
-    .logo {
-      width: 150px;
-      margin: 0 auto 1rem;
+    .stat-card .num {
+      font-family: 'Syne', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--accent);
       display: block;
     }
-    .btn {
+    .stat-card .lbl { font-size: 0.82rem; color: var(--muted); margin-top: 0.2rem; }
+
+    /* ── GAMES ── */
+    .games-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .game-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    }
+    .game-card:hover {
+      border-color: rgba(255,124,58,0.4);
+      box-shadow: 0 8px 40px var(--card-glow);
+      transform: translateY(-3px);
+    }
+    .game-card-header {
+      padding: 1.8rem 1.8rem 1rem;
+    }
+    .game-card-header img.game-logo {
+      width: 72px;
+      height: 72px;
+      border-radius: 16px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 1px solid var(--border);
+    }
+    .game-card-header .game-tag {
       display: inline-block;
-      padding: 0.8rem 1.5rem;
-      margin-top: 1rem;
-      font-size: 1.1rem;
-      background: #00c853;
-      color: white;
+      background: rgba(255,124,58,0.12);
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-radius: 4px;
+      padding: 0.2rem 0.55rem;
+      margin-bottom: 0.6rem;
+    }
+    .game-card-header h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.5rem;
+    }
+    .game-card-header p { color: var(--muted); font-size: 0.93rem; }
+    .game-card-features {
+      padding: 0 1.8rem 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .feat-chip {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.25rem 0.7rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .game-screenshot {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-top: 1px solid var(--border);
+      display: block;
+    }
+    .game-card-footer {
+      padding: 1.2rem 1.8rem;
+      border-top: 1px solid var(--border);
+    }
+    .btn-green {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.65rem 1.3rem;
+      background: var(--green);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.88rem;
       text-decoration: none;
-      border-radius: 0.5rem;
-      transition: background 0.3s ease;
+      border-radius: 8px;
+      transition: background 0.2s;
     }
-    .btn:hover {
-      background: #00a844;
+    .btn-green:hover { background: var(--green-dark); }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.65rem 1.3rem;
+      background: transparent;
+      color: var(--text);
+      font-weight: 500;
+      font-size: 0.88rem;
+      text-decoration: none;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      transition: border-color 0.2s;
     }
-    footer {
-      margin-top: 3rem;
-      color: #666;
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+    .card-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+    /* ── ARTICLES ── */
+    .articles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .article-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .article-card:hover { border-color: rgba(255,124,58,0.3); transform: translateY(-2px); }
+    .article-meta {
+      display: flex;
+      gap: 0.6rem;
+      align-items: center;
+      margin-bottom: 0.9rem;
+    }
+    .article-cat {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+    }
+    .cat-gamedev { background: rgba(255,124,58,0.15); color: var(--accent); }
+    .cat-webdev { background: rgba(46,204,113,0.15); color: var(--green); }
+    .article-date { font-size: 0.8rem; color: var(--muted); }
+    .article-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.7rem;
+      line-height: 1.3;
+    }
+    .article-card p { color: var(--muted); font-size: 0.92rem; line-height: 1.7; }
+    .article-read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 1.1rem;
+    }
+    .article-read-more:hover { text-decoration: underline; }
+
+    /* ── FULL ARTICLES ── */
+    .article-full {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+    }
+    .article-full h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.5rem;
+    }
+    .article-full .article-meta { margin-bottom: 1.4rem; }
+    .article-full p {
+      color: var(--muted);
+      margin-bottom: 1.1rem;
+      font-size: 0.97rem;
+    }
+    .article-full h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 1.8rem 0 0.6rem;
+    }
+    .article-full ul {
+      color: var(--muted);
+      padding-left: 1.4rem;
+      margin-bottom: 1.1rem;
+    }
+    .article-full ul li { margin-bottom: 0.45rem; font-size: 0.97rem; }
+    .article-full strong { color: var(--text); }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--bg); }
+    .contact-wrapper {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+    }
+    @media (max-width: 700px) { .contact-wrapper { grid-template-columns: 1fr; } }
+    .contact-info {
+      background: linear-gradient(135deg, rgba(255,124,58,0.12) 0%, transparent 60%);
+      padding: 3rem 2rem;
+      border-right: 1px solid var(--border);
+    }
+    .contact-info h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 0.8rem;
+    }
+    .contact-info p { color: var(--muted); margin-bottom: 2rem; font-size: 0.95rem; }
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.9rem;
+      margin-bottom: 1.4rem;
+    }
+    .contact-icon {
+      width: 38px; height: 38px;
+      background: rgba(255,124,58,0.12);
+      border: 1px solid rgba(255,124,58,0.2);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .contact-item-text .label { font-size: 0.78rem; color: var(--muted); font-weight: 500; margin-bottom: 0.1rem; }
+    .contact-item-text a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.93rem;
+    }
+    .contact-item-text a:hover { color: var(--accent); }
+    .contact-form { padding: 3rem 2rem; }
+    .contact-form h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+    @media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } }
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
+    .form-group label { font-size: 0.82rem; font-weight: 600; color: var(--muted); letter-spacing: 0.3px; }
+    .form-group input, .form-group textarea, .form-group select {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.7rem 1rem;
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
       font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+      border-color: var(--accent);
+    }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+    .form-group select option { background: var(--bg3); }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    footer .footer-logo {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+      display: block;
+    }
+    footer .footer-links { display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 1.2rem; flex-wrap: wrap; }
+    footer .footer-links a { color: var(--muted); text-decoration: none; font-size: 0.85rem; }
+    footer .footer-links a:hover { color: var(--text); }
+
+    /* ── SKILLS BAR ── */
+    .skills-row { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1rem; }
+    .skill-tag {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.3rem 0.85rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    /* ── MISC ── */
+    .emoji-large { font-size: 2.2rem; margin-bottom: 0.7rem; display: block; }
+
+    @media (max-width: 600px) {
+      .hero { padding: 5rem 1.2rem 3.5rem; }
+      section { padding: 3.5rem 1.2rem; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>G12 Games</h1>
-    <p>Run by a 15-year-old based in Maharashtra, India 🇮🇳</p>
-  </header>
 
-  <div class="game-section">
-    <h2>🎮 Ball Roller</h2>
-    <img src="logo.webp" alt="Ball Roller Game Icon" class="logo">
-    <img src="menu.webp" alt="Ball Roller Menu Screenshot">
-    <p>Roll the ball, avoid traps, and reach the finish! Simple, fun, and addictive.</p>
-    <a class="btn" href="https://play.google.com/store/apps/details?id=com.G12Games.BallRoller" target="_blank">Get it on Google Play</a>
-    <p>Get ready to test your skills in a fast-paced 3D ball rolling adventure!
-Start simple and sharpen your reflexes through 15 exciting levels that grow from easy to seriously challenging. Built by two indie devs, this addictive 3D platformer is fun, focused, and made for all ages.
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">G12<span>Games</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#games">Games</a></li>
+    <li><a href="#articles">Articles</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-🎮 Joystick & D-Pad Controls – Play your way
-⬆️ Progressive Difficulty – Levels get tougher as you go
-✅ Limited Ads
-👨‍👩‍👧‍👦 Great for All Ages
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">🇮🇳 Maharashtra, India · Age 15</div>
+  <h1>Building <span class="accent">games</span> &amp; the web,<br>one commit at a time.</h1>
+  <p class="hero-sub">I'm a self-taught indie developer crafting mobile games and web apps from scratch. Welcome to G12 Games.</p>
+  <div class="hero-ctas">
+    <a href="#games" class="btn-primary">🎮 See My Games</a>
+    <a href="#contact" class="btn-secondary">✉️ Get in Touch</a>
+  </div>
+</div>
+<hr class="divider">
 
-If you love rolling ball games, platform challenges, or precision control gameplay, this one’s for you.
-Can you reach the final level?</p>
+<!-- ABOUT -->
+<section id="about">
+  <span class="section-label">About Me</span>
+  <div class="about-grid">
+    <div class="about-text">
+      <h2 class="section-title">Hey, I'm the developer behind G12 Games.</h2>
+      <p>I'm a 15-year-old self-taught developer from Maharashtra, India. I started coding out of curiosity and quickly fell in love with building things — from mobile games to web platforms.</p>
+      <p>My journey started with Unity and C# for game development, and then expanded into HTML, CSS, JavaScript, and Python as I built more ambitious projects. Every project I ship teaches me something new.</p>
+      <p>Beyond coding, I love learning how to grow projects, understand users, and make software that actually gets used. G12 Games is my creative lab where ideas become real products.</p>
+      <div class="skills-row">
+        <span class="skill-tag">Unity (C#)</span>
+        <span class="skill-tag">HTML & CSS</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">Game Design</span>
+        <span class="skill-tag">UI/UX</span>
+        <span class="skill-tag">Google Play</span>
+      </div>
+    </div>
+    <div>
+      <div class="stat-grid">
+        <div class="stat-card">
+          <span class="num">2</span>
+          <span class="lbl">Apps Shipped</span>
+        </div>
+        <div class="stat-card">
+          <span class="num">15</span>
+          <span class="lbl">Game Levels Built</span>
+        </div>
+        <div class="stat-card">
+          <span class="num">3+</span>
+          <span class="lbl">Years Coding</span>
+        </div>
+        <div class="stat-card">
+          <span class="num">0→1</span>
+          <span class="lbl">Indie Spirit</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<hr class="divider">
+
+<!-- GAMES -->
+<section id="games">
+  <span class="section-label">My Projects</span>
+  <h2 class="section-title">Games &amp; Apps</h2>
+  <p class="section-desc">From Android games to educational quiz platforms — here's what I've shipped so far.</p>
+
+  <div class="games-grid">
+
+    <!-- Ball Roller 3D -->
+    <div class="game-card">
+      <div class="game-card-header">
+        <img src="logo.webp" alt="Ball Roller 3D Icon" class="game-logo">
+        <div class="game-tag">Android · 3D Platformer</div>
+        <h3>Ball Roller 3D</h3>
+        <p>A fast-paced 3D platformer where you roll a ball through 15 progressively challenging levels. Simple controls, addictive gameplay, built for all ages.</p>
+      </div>
+      <div class="game-card-features">
+        <span class="feat-chip">🕹️ Joystick + D-Pad</span>
+        <span class="feat-chip">⬆️ 15 Levels</span>
+        <span class="feat-chip">✅ Limited Ads</span>
+        <span class="feat-chip">👨‍👩‍👧 All Ages</span>
+      </div>
+      <img src="menu.webp" alt="Ball Roller 3D Menu Screenshot" class="game-screenshot">
+      <div class="game-card-footer">
+        <div class="card-actions">
+          <a class="btn-green" href="https://play.google.com/store/apps/details?id=com.G12Games.BallRoller" target="_blank" rel="noopener">
+            ▶ Google Play
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Padhai24x7 -->
+    <div class="game-card">
+      <div class="game-card-header">
+        <span style="font-size:3rem;display:block;margin-bottom:0.8rem;">📚</span>
+        <div class="game-tag">Web App · EdTech</div>
+        <h3>Padhai 24x7</h3>
+        <p>India's quiz platform for ICSE Grade 10 students. Covers all major subjects with a chess-style ELO rating system, leaderboards, and instant feedback.</p>
+      </div>
+      <div class="game-card-features">
+        <span class="feat-chip">🏆 ELO Rankings</span>
+        <span class="feat-chip">📖 All ICSE Subjects</span>
+        <span class="feat-chip">⚡ Instant Feedback</span>
+        <span class="feat-chip">🆓 Free</span>
+      </div>
+      <div style="height:180px;background:linear-gradient(135deg,rgba(46,204,113,0.12),rgba(255,124,58,0.08));display:flex;align-items:center;justify-content:center;border-top:1px solid var(--border);">
+        <div style="text-align:center;color:var(--muted);font-size:0.9rem;">
+          <span style="font-size:2.5rem;display:block;margin-bottom:0.5rem;">🎓</span>
+          ICSE Quiz Platform
+        </div>
+      </div>
+      <div class="game-card-footer">
+        <div class="card-actions">
+          <a class="btn-green" href="https://meet-167.github.io/padhai24x7/" target="_blank" rel="noopener">
+            ▶ Play Now
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<hr class="divider">
+
+<!-- ARTICLES -->
+<section id="articles">
+  <span class="section-label">Dev Blog</span>
+  <h2 class="section-title">Articles &amp; Insights</h2>
+  <p class="section-desc">Thoughts on game dev, web development, and what I've learned building real projects as a teen developer.</p>
+
+  <!-- FULL ARTICLE 1 -->
+  <div class="article-full">
+    <div class="article-meta">
+      <span class="article-cat cat-gamedev">Game Dev</span>
+      <span class="article-date">June 2025</span>
+    </div>
+    <h2>How I Built My First 3D Mobile Game at 15 — Lessons from Ball Roller 3D</h2>
+    <p>When I first opened Unity, I had no idea what a <strong>Rigidbody</strong> was. I just wanted to make something I could show my friends — something real, something playable. Eight months later, Ball Roller 3D was live on the Google Play Store. Here's what I actually learned building it from scratch.</p>
+
+    <h3>Start With the Simplest Possible Game Mechanic</h3>
+    <p>The biggest trap new game developers fall into is trying to build the next big hit on their first attempt. I avoided this (barely) by picking the simplest mechanic I could think of: roll a ball, don't fall off. That's it. The genius of simple mechanics is that they let you focus all your energy on <strong>making the feeling of play right</strong> before worrying about content, story, or systems.</p>
+    <p>In Ball Roller 3D, getting the physics to feel satisfying took weeks. The ball needed to feel heavy but responsive. Too much friction and it felt sluggish; too little and it was impossible to control. Tuning these tiny values — drag, angular drag, mass — taught me more about game feel than any tutorial I'd watched.</p>
+
+    <h3>Level Design Is Harder Than It Looks</h3>
+    <p>I designed 15 levels, and the difficulty curve was the hardest part to get right. Early on, my "easy" levels were confusing and my "hard" levels were just annoying rather than challenging. The difference between a hard level that feels fair and one that feels cheap is about <strong>visual clarity and consistent rules</strong>. If a player fails, they need to immediately understand why — and feel like they could do better with more skill.</p>
+    <p>I ended up playtesting each level dozens of times, and having a second developer (my co-dev) play through fresh to spot places where the design was unclear. Fresh eyes are invaluable. Never test your own game in isolation.</p>
+
+    <h3>The Reality of Publishing on Google Play</h3>
+    <p>The publishing process was surprisingly technical. Google requires a signed APK, a privacy policy (even for simple games), screenshot assets in multiple resolutions, and a content rating questionnaire. Building the store listing taught me a lot about <strong>app marketing</strong> — writing a description that actually explains the game, picking the right category, and optimizing for discoverability.</p>
+    <p>The most humbling moment? Watching the install count hover near zero for the first week. Organic discovery on the Play Store is brutally hard without any marketing budget. This pushed me to learn about ASO (App Store Optimization) and think more carefully about keywords and visuals.</p>
+
+    <h3>What I'd Do Differently</h3>
+    <ul>
+      <li>Start marketing <em>before</em> launch, not after</li>
+      <li>Add a tutorial level — new players needed more guidance than I realized</li>
+      <li>Use source control (Git) from day one — I lost work twice without it</li>
+      <li>Keep a dev log to track decisions and avoid repeating mistakes</li>
+    </ul>
+    <p>Building Ball Roller 3D was the best education I've had. No classroom teaches you how to ship. If you're thinking about making a game, start today — with the simplest idea you have. Done is better than perfect.</p>
   </div>
 
-  <div class="game-section">
-    <h2>Padhai24x7</h2>
-    <p>Master ICSE Grade 10 with Interactive Quizzes!</p>
-    <a class="btn" href="https://meet-167.github.io/padhai24x7/" target="_blank">Play</a>
-    <p>📚 About Padhai 24x7
-Your Complete ICSE Grade 10 Quiz Platform
+  <!-- FULL ARTICLE 2 -->
+  <div class="article-full">
+    <div class="article-meta">
+      <span class="article-cat cat-webdev">Web Dev</span>
+      <span class="article-date">July 2025</span>
+    </div>
+    <h2>Building Padhai 24x7: What I Learned Shipping a Web App for Students</h2>
+    <p>Padhai 24x7 started as a simple idea: what if studying for ICSE board exams felt less like a chore and more like a game? The ELO rating system — borrowed from chess — was the core hook. Here's how I built it and what surprised me along the way.</p>
 
-Padhai 24x7 is India's premier quiz platform designed exclusively for ICSE Grade 10 students. We transform traditional exam preparation into an engaging, competitive, and effective learning experience that helps thousands of students excel in their board examinations.
-<hr>
-🎯 What We Offer
-Comprehensive Subject Coverage: All major ICSE Grade 10 subjects including Science (Physics, Chemistry, Biology), Mathematics, History & Civics, Geography and Computer Applications.
-Exam-Focused Questions: Every question is carefully curated to align with the latest ICSE syllabus and examination patterns, ensuring you practice with content that mirrors your board exams.
-Competitive Learning: Our unique ELO rating system ranks students based on performance, creating a competitive yet supportive environment that motivates continuous improvement.
-Instant Feedback: Get immediate results on every answer with correct solutions displayed instantly, helping you learn from mistakes right away.
-Performance Tracking: Receive detailed summaries after each quiz showing your strengths and areas for improvement, making it easy to focus your study efforts.
-National Leaderboard: Compete with ICSE students across India on our Top 100 leaderboard and watch your rank improve with consistent practice.
-<hr>
-🎮 How It Works
-Create Your Profile: Sign up with your name and start building your learning journey. All progress is saved automatically.
-Choose a Subject: Select Science, Mathematics, History & Civics, Geography or Computer Applications based on what you want to practice.
-Take the Quiz: Answer 10 multiple-choice questions randomly selected from our extensive question bank for fresh content every time.
-Get Instant Feedback: See correct and incorrect answers immediately with highlighted solutions for learning on the spot.
-Review Performance: View a complete summary with all questions, your answers, and correct solutions for detailed review.
-Earn ELO Points: High scores increase your rating while lower scores decrease it, keeping competition fair and skill-based.
-Practice Regularly: Take unlimited quizzes to continuously improve your knowledge and climb the leaderboard.
-🏆 ELO Rating System: We use a chess-style rating system where everyone starts at 1000 points. Good performance increases your ELO, while poor scores decrease it. This ensures the leaderboard truly reflects skill, not just participation!
-<hr>
-✅ Why Students Love Us
-Makes Studying Fun: Turn boring revision into an exciting competitive game
-Builds Confidence: Regular practice with exam-style questions reduces test anxiety
-Identifies Weak Areas: Quickly spot topics that need more attention
-Flexible Learning: Practice anytime, anywhere, at your own pace
-Stay Motivated: Competition with peers keeps you engaged and improving
-Completely Free: Quality education accessible to all ICSE students
-📱 Perfect for Board Exam Preparation
-Whether you're starting Grade 10 or preparing for final exams, Padhai 24x7 adapts to your needs. Use it for daily practice, last-minute revision, or testing your knowledge before school exams. Students use our platform alongside textbooks and coaching to reinforce learning effectively.
-<hr>
-🎓 Our Mission
-We believe every ICSE student deserves access to quality practice materials and engaging learning tools. Our mission is to make exam preparation less stressful and more effective by combining education with the excitement of competition. We're committed to helping students achieve their academic goals.
+    <h3>Why Vanilla HTML/CSS/JS Still Wins for Small Projects</h3>
+    <p>A lot of beginner developers think they need React, Next.js, or some big framework to build anything real. For Padhai 24x7, I went with plain HTML, CSS, and JavaScript — and it was the right call. <strong>No build step, no dependencies to maintain, instant deployment via GitHub Pages.</strong> The entire project went from idea to live URL in a weekend.</p>
+    <p>The lesson: pick the simplest tool that solves the problem. Frameworks add power but also complexity, and when you're learning, complexity slows you down. Master the fundamentals first.</p>
 
-📚🎯 Remember: Practice makes perfect, and Padhai 24x7 makes practice fun!</p>
+    <h3>Designing the ELO System for Learning</h3>
+    <p>The standard ELO formula adjusts a player's rating based on the expected vs actual outcome of a match. Adapting this for quizzes meant treating each question attempt as a "match" — a high-scoring quiz raises your ELO, a low-scoring one lowers it. The challenge was calibrating the K-factor (how much ratings shift per result) so changes felt meaningful but not volatile.</p>
+    <p>I also had to think carefully about <strong>fairness</strong>: a student who takes 50 quizzes shouldn't be unfairly punished by a single bad session. Adding a soft floor to the ELO and dampening changes for high-volume users made the system feel more motivating and less frustrating.</p>
+
+    <h3>Building for Real Users — Students Under Exam Pressure</h3>
+    <p>The UX decisions I made for Padhai 24x7 were different from anything I'd built before, because the users were stressed. Students preparing for board exams don't want friction — they want to open the app, pick a subject, and start practicing immediately. This meant:</p>
+    <ul>
+      <li>No sign-up required to start (progress saves automatically by name)</li>
+      <li>Large, readable question text on mobile</li>
+      <li>Instant feedback on every answer — no waiting until the end of the quiz</li>
+      <li>A summary screen with all correct answers so the quiz doubles as a study tool</li>
+    </ul>
+    <p>The biggest UX lesson: <strong>remove every step between a user's intention and the action.</strong> Every extra tap or click is a reason to leave.</p>
+
+    <h3>Hosting and Scaling on Zero Budget</h3>
+    <p>GitHub Pages hosts Padhai 24x7 completely free. For a static web app with no server-side logic, this is perfect. The trade-off is that all data lives in the browser (localStorage), which means leaderboards are local rather than global. A future version with a proper backend (Node.js + a lightweight database) would enable real cross-device leaderboards and persistent national rankings.</p>
+    <p>This experience taught me a lot about <strong>progressive enhancement</strong> — start with what you can ship, then improve it. A working product with local leaderboards is infinitely more valuable than a half-built app waiting for a perfect backend.</p>
   </div>
 
-  <footer>
-    2025 - G12 Games. Made with ❤️ by a teen developer.
-  </footer>
+  <!-- ARTICLE CARDS -->
+  <div class="articles-grid" style="margin-top:2rem;">
+    <div class="article-card">
+      <div class="article-meta">
+        <span class="article-cat cat-gamedev">Game Dev</span>
+        <span class="article-date">Coming Soon</span>
+      </div>
+      <h3>Unity vs Godot for Indie Developers in 2025</h3>
+      <p>After Unity's controversial runtime fee changes, many indie devs moved to Godot. I compare both engines from the perspective of a solo developer building mobile games.</p>
+      <a href="#" class="article-read-more">Coming soon →</a>
+    </div>
+    <div class="article-card">
+      <div class="article-meta">
+        <span class="article-cat cat-webdev">Web Dev</span>
+        <span class="article-date">Coming Soon</span>
+      </div>
+      <h3>How I Deployed My First Web App for Free (And What I'd Use Next)</h3>
+      <p>GitHub Pages, Netlify, Vercel, Railway — a practical breakdown of free hosting options for student projects and their real-world trade-offs.</p>
+      <a href="#" class="article-read-more">Coming soon →</a>
+    </div>
+  </div>
+</section>
+<hr class="divider">
+
+<!-- CONTACT -->
+<section id="contact">
+  <span class="section-label">Contact</span>
+  <h2 class="section-title">Let's Talk</h2>
+  <p class="section-desc">Game feedback, collab ideas, questions about my code — I read everything.</p>
+
+  <div class="contact-wrapper">
+    <div class="contact-info">
+      <h3>Reach Out</h3>
+      <p>Whether you've played one of my games, have a bug report, a collab idea, or just want to chat about game dev — my inbox is open.</p>
+
+      <div class="contact-item">
+        <div class="contact-icon">✉️</div>
+        <div class="contact-item-text">
+          <div class="label">Email</div>
+          <a href="mailto:garygaming982@gmail.com">garygaming982@gmail.com</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">🎮</div>
+        <div class="contact-item-text">
+          <div class="label">Google Play</div>
+          <a href="https://play.google.com/store/apps/developer?id=G12+Games" target="_blank" rel="noopener">G12 Games on Play Store</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div class="contact-item-text">
+          <div class="label">Location</div>
+          <span style="color:var(--text);font-size:0.93rem;font-weight:500;">Maharashtra, India 🇮🇳</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h3>Send a Message</h3>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" placeholder="Alex" />
+        </div>
+        <div class="form-group">
+          <label>Your Email</label>
+          <input type="email" placeholder="you@example.com" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Topic</label>
+        <select>
+          <option value="">Select a topic…</option>
+          <option>Game Feedback</option>
+          <option>Bug Report</option>
+          <option>Collaboration</option>
+          <option>General Question</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea placeholder="Your message here…"></textarea>
+      </div>
+      <a href="#" class="btn-primary" onclick="handleContact(event)">Send Message →</a>
+      <p id="contact-note" style="font-size:0.8rem;color:var(--muted);margin-top:0.8rem;"></p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">G12 Games</span>
+  <div class="footer-links">
+    <a href="#about">About</a>
+    <a href="#games">Games</a>
+    <a href="#articles">Articles</a>
+    <a href="#contact">Contact</a>
+    <a href="mailto:garygaming982@gmail.com">Email</a>
+  </div>
+  <p>© 2025 G12 Games · Made with ❤️ by a teen developer from Maharashtra, India</p>
+</footer>
+
+<script>
+  function handleContact(e) {
+    e.preventDefault();
+    const note = document.getElementById('contact-note');
+    note.textContent = "Thanks! For now, please email me directly at garygaming982@gmail.com — form backend coming soon!";
+    note.style.color = '#2ecc71';
+  }
+</script>
+
 </body>
 </html>
